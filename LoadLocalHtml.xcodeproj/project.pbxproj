@@ -13,6 +13,12 @@
 		FE42895C20BEFBFF009CF18E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE42895B20BEFBFF009CF18E /* Assets.xcassets */; };
 		FE42895F20BEFBFF009CF18E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE42895D20BEFBFF009CF18E /* LaunchScreen.storyboard */; };
 		FE42896220BEFBFF009CF18E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE42896120BEFBFF009CF18E /* main.m */; };
+		FE42896920BEFC31009CF18E /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = FE42896820BEFC31009CF18E /* index.html */; };
+		FE42896C20BEFCAC009CF18E /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = FE42896B20BEFCAC009CF18E /* GCDAsyncSocket.m */; };
+		FE42896F20BEFDFC009CF18E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE42896E20BEFDFB009CF18E /* WebKit.framework */; };
+		FE42897220BEFE4C009CF18E /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = FE42897120BEFE4C009CF18E /* Server.m */; };
+		FE42897520BF0B2F009CF18E /* GTRequestResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = FE42897420BF0B2F009CF18E /* GTRequestResolver.m */; };
+		FE42897720BF0F4F009CF18E /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FE42897620BF0F4F009CF18E /* timg.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,15 @@
 		FE42895E20BEFBFF009CF18E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE42896020BEFBFF009CF18E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE42896120BEFBFF009CF18E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE42896820BEFC31009CF18E /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		FE42896A20BEFCAC009CF18E /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		FE42896B20BEFCAC009CF18E /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		FE42896E20BEFDFB009CF18E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		FE42897020BEFE4C009CF18E /* Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		FE42897120BEFE4C009CF18E /* Server.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
+		FE42897320BF0B2F009CF18E /* GTRequestResolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTRequestResolver.h; sourceTree = "<group>"; };
+		FE42897420BF0B2F009CF18E /* GTRequestResolver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTRequestResolver.m; sourceTree = "<group>"; };
+		FE42897620BF0F4F009CF18E /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE42896F20BEFDFC009CF18E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +60,7 @@
 			children = (
 				FE42895120BEFBFE009CF18E /* LoadLocalHtml */,
 				FE42895020BEFBFE009CF18E /* Products */,
+				FE42896D20BEFDFB009CF18E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,12 +80,28 @@
 				FE42895520BEFBFE009CF18E /* ViewController.h */,
 				FE42895620BEFBFE009CF18E /* ViewController.m */,
 				FE42895820BEFBFE009CF18E /* Main.storyboard */,
+				FE42896A20BEFCAC009CF18E /* GCDAsyncSocket.h */,
+				FE42896B20BEFCAC009CF18E /* GCDAsyncSocket.m */,
+				FE42897020BEFE4C009CF18E /* Server.h */,
+				FE42897120BEFE4C009CF18E /* Server.m */,
+				FE42897320BF0B2F009CF18E /* GTRequestResolver.h */,
+				FE42897420BF0B2F009CF18E /* GTRequestResolver.m */,
+				FE42896820BEFC31009CF18E /* index.html */,
+				FE42897620BF0F4F009CF18E /* timg.jpeg */,
 				FE42895B20BEFBFF009CF18E /* Assets.xcassets */,
 				FE42895D20BEFBFF009CF18E /* LaunchScreen.storyboard */,
 				FE42896020BEFBFF009CF18E /* Info.plist */,
 				FE42896120BEFBFF009CF18E /* main.m */,
 			);
 			path = LoadLocalHtml;
+			sourceTree = "<group>";
+		};
+		FE42896D20BEFDFB009CF18E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE42896E20BEFDFB009CF18E /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +161,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE42897720BF0F4F009CF18E /* timg.jpeg in Resources */,
 				FE42895F20BEFBFF009CF18E /* LaunchScreen.storyboard in Resources */,
+				FE42896920BEFC31009CF18E /* index.html in Resources */,
 				FE42895C20BEFBFF009CF18E /* Assets.xcassets in Resources */,
 				FE42895A20BEFBFE009CF18E /* Main.storyboard in Resources */,
 			);
@@ -141,9 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE42897520BF0B2F009CF18E /* GTRequestResolver.m in Sources */,
+				FE42896C20BEFCAC009CF18E /* GCDAsyncSocket.m in Sources */,
 				FE42895720BEFBFE009CF18E /* ViewController.m in Sources */,
 				FE42896220BEFBFF009CF18E /* main.m in Sources */,
 				FE42895420BEFBFE009CF18E /* AppDelegate.m in Sources */,
+				FE42897220BEFE4C009CF18E /* Server.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

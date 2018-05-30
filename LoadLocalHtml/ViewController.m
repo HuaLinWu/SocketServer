@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-
+#import <WebKit/WebKit.h>
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet WKWebView *webView;
 
 @end
 
@@ -19,6 +20,15 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)startLoadAction:(UIButton *)sender {
+    NSURL *url = [NSURL URLWithString:@"http://127.0.0.1:8080/index.html"];
+    NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+//    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"timg" ofType:@"jpeg"];
+//    NSData *data = [NSData dataWithContentsOfFile:imagePath];
+//    [urlRequest setHTTPBody:data];
+    
+    [self.webView loadRequest:urlRequest];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

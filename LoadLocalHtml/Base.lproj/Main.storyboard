@@ -1,24 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L0b-4I-Dsw"/>
+                        <viewControllerLayoutGuide type="bottom" id="dqL-Sp-RQv"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkM-hc-wmk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="459"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zL-tp-8EZ">
+                                <rect key="frame" x="128" y="544" width="128" height="30"/>
+                                <state key="normal" title="开始加载html"/>
+                                <connections>
+                                    <action selector="startLoadAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zlq-Je-847"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DkM-hc-wmk" secondAttribute="trailing" id="0Xt-la-QRB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1zL-tp-8EZ" secondAttribute="trailing" constant="103" id="96u-sm-f8g"/>
+                            <constraint firstItem="DkM-hc-wmk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H70-Pz-hxq"/>
+                            <constraint firstItem="dqL-Sp-RQv" firstAttribute="top" secondItem="1zL-tp-8EZ" secondAttribute="bottom" constant="93" id="XWb-2Y-3zT"/>
+                            <constraint firstItem="1zL-tp-8EZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="112" id="c5u-c5-PjF"/>
+                            <constraint firstItem="DkM-hc-wmk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kbv-tK-V3M"/>
+                            <constraint firstItem="1zL-tp-8EZ" firstAttribute="top" secondItem="DkM-hc-wmk" secondAttribute="bottom" constant="85" id="y1T-4A-1NW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="DkM-hc-wmk" id="J9u-VJ-lDN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>

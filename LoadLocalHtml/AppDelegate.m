@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Server.h"
 @interface AppDelegate ()
-
+@property(nonatomic,strong)Server *localServer;
 @end
 
 @implementation AppDelegate
@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.localServer = [[Server alloc] init];
+    [self.localServer startServer];
     return YES;
 }
 
